@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dbe2ec"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.percent.PercentRelativeLayout xmlns:first="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout_first"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="100%"
+        app:layout_widthPercent="5%">
+
+        <Button
+            android:id="@+id/btn_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            first:layout_heightPercent="7%"
+            first:layout_widthPercent="85%"
+            android:background="@drawable/left"
+            android:layout_centerInParent="true"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/layout_second"
+        android:layout_toRightOf="@id/layout_first"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="70%"
+        app:layout_heightPercent="90%"
+        android:layout_centerVertical="true"
+        >
+
+        <TextView
+            android:id="@+id/tv_room_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="100%"
+            app:layout_heightPercent="15%"
+            android:background="#f9540b"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/prl_title"
+            android:layout_below="@id/tv_room_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="100%"
+            app:layout_heightPercent="10%"
+            android:background="#f46c3c">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_heightPercent="100%"
+                app:layout_widthPercent="40%"
+                android:text="时间"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/tv_sponsor"
+                android:layout_toEndOf="@id/tv_time"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_heightPercent="100%"
+                app:layout_widthPercent="20%"
+                android:text="发起人"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/tv_theme"
+                android:layout_toEndOf="@id/tv_sponsor"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_heightPercent="100%"
+                app:layout_widthPercent="40%"
+                android:text="会议主题"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+        </android.support.percent.PercentRelativeLayout>
+        <ListView
+            android:id="@+id/list"
+            android:layout_below="@id/prl_title"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            app:layout_heightPercent="80%"
+            app:layout_widthPercent="100%"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout xmlns:third="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout_third"
+        android:layout_toRightOf="@id/layout_second"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="100%"
+        app:layout_widthPercent="5%"
+        >
+
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            third:layout_heightPercent="7%"
+            third:layout_widthPercent="85%"
+            android:background="@drawable/right"
+            android:layout_centerInParent="true"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout xmlns:fourth="http://schemas.android.com/apk/res-auto"
+        android:layout_toRightOf="@id/layout_third"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="18%"
+        app:layout_heightPercent="90%"
+        android:layout_centerVertical="true"
+        >
+
+        <android.support.percent.PercentRelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layout_img"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            fourth:layout_widthPercent="100%"
+            fourth:layout_heightPercent="32%"
+            >
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="0dp"
+                android:layout_height="00dp"
+                app:layout_widthPercent="95%"
+                app:layout_heightPercent="95%"
+                android:layout_centerInParent="true"
+                android:background="#ffffff"
+                android:clickable="true"/>
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layout_tv_sign"
+            android:layout_below="@+id/layout_img"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            fourth:layout_widthPercent="100%"
+            fourth:layout_heightPercent="8%"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_widthPercent="100%"
+                app:layout_heightPercent="75%"
+                android:background="#b6b8bb"
+                android:text="扫码签到"
+                android:textColor="@color/black"
+                android:gravity="center" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layout_tv_remarks"
+            android:layout_below="@+id/layout_tv_sign"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            fourth:layout_widthPercent="100%"
+            fourth:layout_heightPercent="60%"
+            >
+
+            <TextView
+                android:id="@+id/tv_remarks"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_widthPercent="100%"
+                app:layout_heightPercent="98%"
+                android:scrollbars="vertical"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+
+        </android.support.percent.PercentRelativeLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

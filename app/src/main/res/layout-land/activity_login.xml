@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/prl_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="45%"
+        app:layout_heightPercent="45%"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="100%"
+            app:layout_heightPercent="100%"
+            android:src="@drawable/logo"
+            android:layout_alignParentBottom="true"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/prl_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="30%"
+        app:layout_heightPercent="40%"
+        android:background="@drawable/bg_login"
+        android:layout_toEndOf="@+id/prl_logo"
+        android:layout_centerVertical="true">
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/prl_login_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="85%"
+            app:layout_heightPercent="80%"
+            android:layout_centerInParent="true"
+            >
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/prl_reserve_id"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_widthPercent="100%"
+                app:layout_heightPercent="32%"
+                >
+                <ImageView
+                    android:id="@+id/img_person"
+                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="7%"
+                    android:src="@drawable/ic_person"
+                    />
+                <EditText
+                    android:id="@+id/et_person_id"
+                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="80%"
+                    android:layout_centerHorizontal="true"
+                    android:hint="请输入预约对象ID"
+                    android:textSize="11sp"
+                    />
+                <Button
+                    android:id="@+id/btn_delete_reserve_id"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    app:layout_heightPercent="30%"
+                    app:layout_widthPercent="7%"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_delete"/>
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/prl_password"
+                android:layout_below="@id/prl_reserve_id"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_widthPercent="100%"
+                app:layout_heightPercent="32%"
+                >
+                <ImageView
+                    android:id="@+id/img_password"
+                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="7%"
+                    android:src="@drawable/ic_password"
+                    />
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="80%"
+                    android:hint="请输入密码"
+                    android:textSize="11sp"
+                    android:inputType="textPassword"
+                    android:layout_centerHorizontal="true"/>
+                <Button
+                    android:id="@+id/btn_delete_password"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    app:layout_heightPercent="30%"
+                    app:layout_widthPercent="7%"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_delete"/>
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/prl_login"
+                android:layout_alignParentBottom="true"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_widthPercent="100%"
+                app:layout_heightPercent="25%"
+                >
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="70%"
+                    android:layout_centerHorizontal="true"
+                    android:text="登录"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_btn_login"
+                    />
+            </android.support.percent.PercentRelativeLayout>
+
+        </android.support.percent.PercentRelativeLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

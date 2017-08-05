@@ -1,0 +1,64 @@
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_margin="20dp"
+    android:background="@drawable/bg_list_item">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_widthPercent="40%"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:typeface="normal"
+        android:textColor="@color/black"/>
+
+    <android.support.percent.PercentRelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout_sponsor"
+        android:layout_toEndOf="@id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_widthPercent="20%"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="xxx"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tv_department"
+            android:layout_below="@id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="xx部门"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_below="@id/tv_department"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="18810066697"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_theme"
+        android:layout_toEndOf="@id/layout_sponsor"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_widthPercent="40%"
+        android:text="品鉴于心，合聚成金，势必天下"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/black"/>
+
+</android.support.percent.PercentRelativeLayout>

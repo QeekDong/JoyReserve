@@ -11,6 +11,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.baidu.android.pushservice.PushConstants;
+import com.baidu.android.pushservice.PushManager;
 import com.bumptech.glide.Glide;
 import com.joyreserve.reserve.APIUtils;
 import com.joyreserve.reserve.adapter.MyAdapter;
@@ -31,6 +33,14 @@ import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+/*
+   待解决问题：
+1. 时间动态更新
+调用线程方法
+2. 实时更新数据
+参照例子，先将数据取出来，序列化，再用Bundle传输
+3. 如何给服务器传送特定Id
+*/
 
 public class ReserveActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -69,6 +79,11 @@ public class ReserveActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserve);
+
+        // 启动百度push
+        PushManager.startWork(getApplicationContext(),PushConstants.LOGIN_TYPE_API_KEY,
+                "yIYC6nzNbCYtFpnfdd1gFWhC");
+        //初始化界面
         initView();
         
 //        获取当前时间
@@ -239,3 +254,4 @@ public class ReserveActivity extends AppCompatActivity implements View.OnClickLi
         super.onDestroy();
     }
 }
+
